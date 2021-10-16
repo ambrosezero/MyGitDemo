@@ -1,16 +1,7 @@
-// const btn = document.querySelector('form button');
 const inputElement = document.querySelector('#toDoInput');
 const formElement = document.querySelector('form#toDoForm');
-// old code
-// const allDoneBtns = document.querySelectorAll('ul button');
 let toDoList = document.querySelector('ul#toDoList');
-// old attempt at using localStorage 
-// toDoList = JSON.parse(localStorage.getItem("toDoList"));
-// let myDoneList = ['eat dinner', 'eat dessert'];
-// // myDoneList = myDoneList + JSON.parse(localStorage.getItem("myDoneListStorage"));
-// let myList = ['fix sink', 'buy groceries', 'eat dinner', 'eat dessert'];
-// myNotDoneList = myNotDoneList + JSON.parse(localStorage.getItem("myNotDoneListStorage"));
-// debugger;
+
 
 let myDoneList = JSON.parse(localStorage.getItem("myDoneList"))
 if (!myDoneList) {

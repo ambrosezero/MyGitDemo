@@ -1,3 +1,7 @@
+body {
+    background-color: teal
+}
+
 .taskDone {
     text-decoration: line-through;
     color: darkgray;
