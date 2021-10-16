@@ -21,11 +21,6 @@ for (let item of myList) {
     toDoList.append(newLi);
 }
 
-// for (let item of myDoneList) {
-//     const newLi = document.createElement('li');
-//     newLi.innerText = item;
-//     toDoList.append(newLi);
-// }
 
 
 // "Add Task" submit button click event listener
@@ -42,8 +37,7 @@ formElement.addEventListener("submit", function (e) {
 
 // task completed event listener
 toDoList.addEventListener("click", function (e) {
-    // ????why does the following logic not work in the following if statement:
-    // ????   if (e.target === "button")    why do i need the tagName
+
     if (e.target.tagName == "LI") {
         e.target.classList.toggle("taskDone")
         if (myDoneList.includes(e.target.innerText)) {
@@ -57,19 +51,3 @@ toDoList.addEventListener("click", function (e) {
     localStorage.setItem("myDoneList", JSON.stringify(myDoneList));
     console.log(e);
 })
-
-// the following was replaced with an event delegate
-// for (let btn of allDoneBtns) {
-//     btn.addEventListener("click", function (e) {
-//         // following line is bacause i couldn't get "Done!" to go away with the 
-//         // done button
-//         e.target.innerText = "";
-//         e.target.parentElement.innerHTML = e.target.parentElement.innerText.strike();
-//         console.log(e);
-//     })
-// }
-
-// btn.addEventListener("click", function () {
-//     console.log('button pressed!')
-
-// })
