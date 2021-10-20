@@ -11,7 +11,7 @@ let myList = JSON.parse(localStorage.getItem("myList"))
 if (!myList) {
     myList = [];
 }
-
+// loops through list to check status of tasks
 for (let item of myList) {
     const newLi = document.createElement('li');
     newLi.innerText = item;
